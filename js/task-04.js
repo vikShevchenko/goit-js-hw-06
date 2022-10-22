@@ -1,15 +1,20 @@
-const btn = document.getElementById("counter");
+const refs = {
+  btn: document.getElementById("counter"),
+  result: document.getElementById("value")
+}
 
-const result = document.getElementById("value");
+
+
+
 
 let counterValue = 0;
 
-btn.firstElementChild.addEventListener("click", () => {
+refs.btn.firstElementChild.addEventListener("click", () => {
   counterValue -= 1;
-  return (result.textContent = counterValue);
+  return (refs.result.textContent = counterValue);
 });
 
-btn.lastElementChild.addEventListener("click", () => {
+refs.btn.lastElementChild.addEventListener("click", () => {
   counterValue += 1;
-  return (result.textContent = counterValue);
+  return (refs.result.textContent = counterValue);
 });
